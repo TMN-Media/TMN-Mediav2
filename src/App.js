@@ -18,7 +18,7 @@ function App() {
 			/>
 			<section className='bg-black z-50 absolute backdrop-blur-sm top-0 w-full h-screen bg-opacity-60 text-white text-center'>
 				<NavBar />
-				<div className='flex flex-col justify-center items-center relative'>
+				<div className='flex flex-col justify-center h-1/2 items-center relative'>
 					<img src={heroLogo} alt='' className='w-[150px] m-auto mb-5' />
 					<h1 className='mb-5 '>Better Brand Building</h1>
 					<button className='uppercase bg-primary-100  drop-shadow-xl p-2 text-sm w-[200px] font-bold rounded-full'>
