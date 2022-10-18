@@ -13,7 +13,7 @@ const Contact = () => {
 			<div className='max-w-lg w-full h-[3px] mx-auto my-20 bg-secondary-100'></div>
 
 			<div className=' grid lg:grid-cols-4 lg:gap-10  lg:max-w-6xl m-auto'>
-				<div className='text-center my-auto lg:col-span-2 order-2'>
+				<div className='text-center my-auto lg:col-span-2 lg:order-2'>
 					<p className='text-xl font-bold lg:text-2xl '>
 						Schedule a call with Elvis today!
 					</p>
