@@ -8,6 +8,8 @@ const OfferedServices = () => {
 			<h1 className='text-center text-3xl font-bold text-primary-100 mb-10'>
 				WHAT WE OFFER
 			</h1>
+			<div className='max-w-lg w-full h-[3px] mb-20 mx-auto bg-primary-100'></div>
+
 			<ul className='text-center m-auto  md:w-[850px] grid grid-cols-1 md:grid-cols-2'>
 				{services.map((service, index) => {
 					return (
