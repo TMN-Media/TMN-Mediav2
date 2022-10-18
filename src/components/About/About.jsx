@@ -32,7 +32,7 @@ const About = () => {
 					<div className='flex flex-col lg:flex-row justify-center max-w-5xl m-auto'>
 						<div
 							className=' m-auto mb-5 text-center  flex flex-col justify-center rounded
-					   w-[300px]   h-max  backdrop-blur-lg hover:scale-110 '>
+					   w-[300px]   h-max  backdrop-blur-lg hover:scale-110 mb-20'>
 							<CiRoute className='text-6xl m-auto text-secondary-100' />
 							<h1 className='mb-5 text-2xl font-bold'> The right path </h1>
 							<p className='m-auto  text-lg'>
@@ -46,7 +46,7 @@ const About = () => {
 
 						<div
 							className=' m-auto mb-5 text-center  flex flex-col justify-center rounded
-					   w-[300px]  h-max  backdrop-blur-lg hover:scale-110 '>
+					   w-[300px]  h-max  backdrop-blur-lg hover:scale-110 mb-16'>
 							<AiOutlineLineChart className='text-6xl m-auto text-secondary-100' />
 
 							<h1 className='mb-5 text-2xl font-bold'>
