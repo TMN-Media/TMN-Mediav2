@@ -31,7 +31,7 @@ const Contact = () => {
 						results online with Paid Advertising by the end of this Audit call.
 					</p>
 				</div>
-				<div className='lg:col-span-2 order-1'>
+				<div className='lg:col-span-2 order-1 mb-10'>
 					<InlineWidget
 						className='  col-span-2'
 						url='https://calendly.com/meetwithelvis/30min?back=1&month=2022-10'
