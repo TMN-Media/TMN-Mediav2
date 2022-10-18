@@ -13,7 +13,7 @@ module.exports = {
 					200: "#5217a3",
 					300: "#310d62",
 				},
-				secondary: "#ffbb3b",
+				secondary: { 100: "#ffc94a", 200: "#cca03b" },
 			},
 			transitionProperty: {
 				height: "height",
