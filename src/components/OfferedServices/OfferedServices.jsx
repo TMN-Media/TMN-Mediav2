@@ -4,7 +4,7 @@ import React from "react"
 import { GiCheckMark } from "react-icons/gi"
 const OfferedServices = () => {
 	return (
-		<div className='bg-gradient-to-b to-secondary-200 from-secondary-100 py-10 m-auto '>
+		<div className='bg-gradient-to-b to-secondary-200 from-secondary-100 py-10 m-auto h-full relative'>
 			<h1 className='text-center text-3xl font-bold text-primary-100 mb-10'>
 				WHAT WE OFFER
 			</h1>

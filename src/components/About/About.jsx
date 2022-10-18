@@ -8,7 +8,7 @@ import video2 from "../../assets/BETTER BRAND BUILDING.mp4"
 const About = () => {
 	return (
 		<div>
-			<section className=' flex flex-col h-screen '>
+			<section className=' flex flex-col h-full '>
 				<div className='text-center grow  py-5  pb-32 lg:pb-[250px] relative h-max  flex flex-col justify-center'>
 					<h1 className='text-3xl mx-auto  my-10 '>ABOUT US</h1>
 					<div className='w-1/6 h-[3px] mx-auto bg-primary-100'></div>
@@ -28,7 +28,7 @@ const About = () => {
 						type='video/mp4'
 					/>
 				</div>
-				<div className='bg-gradient-to-b from-primary-100 to-primary-300  grow relative h-max  pt-44 lg:pt-[250px]  text-white py-5 '>
+				<div className='bg-gradient-to-b from-primary-100 to-primary-300  grow relative h-max pt-44 lg:pt-[250px]  text-white py-5 '>
 					<div className='flex flex-col lg:flex-row justify-center max-w-5xl m-auto'>
 						<div
 							className=' m-auto mb-5 text-center  flex flex-col justify-center rounded
