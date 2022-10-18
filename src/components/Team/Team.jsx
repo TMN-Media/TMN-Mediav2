@@ -15,7 +15,7 @@ const Team = () => {
 			</h1>
 			<div className='max-w-lg w-full h-[3px] mx-auto my-10 bg-primary-100'></div>
 			<section className='p-5 grid lg:grid-cols-2 max-w-7xl m-auto'>
-				<div className='m-auto order-2'>
+				<div className='m-auto lg:order-2'>
 					<h1 className='text-3xl text-center text-primary-100 font-bold'>
 						Everything you need in one package
 					</h1>
