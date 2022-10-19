@@ -41,7 +41,7 @@ const Footer = () => {
 						<a href='https://www.instagram.com/tmn__media/'>
 							<CiInstagram className='mr-3' />
 						</a>
-						<a href=''>
+						<a href='/'>
 							<CiLinkedin className='mr-3' />
 						</a>
 					</div>

@@ -5,7 +5,7 @@ import { useState } from "react"
 import { CgMenuGridO } from "react-icons/cg"
 import { TfiClose } from "react-icons/tfi"
 import logo from "../../assets/logo-horizontal-b-text.png"
-
+import { Link } from "react-scroll"
 const NavBar = () => {
 	const [toggle, setToggle] = useState(false)
 	function toggleOnMenu(event) {
@@ -46,11 +46,15 @@ const NavBar = () => {
 				{menuItems.map((menuItem, index) => {
 					return (
 						<li className=' m-3  ' key={index}>
-							<a
-								className=' hover:text-secondary-100 font-bold uppercase'
-								href={menuItem.link}>
+							<Link
+								className=' hover:text-secondary-100 font-bold uppercase cursor-pointer'
+								to={menuItem.name}
+								spy={true}
+								smooth={true}
+								offset={50}
+								duration={500}>
 								{menuItem.name}
-							</a>
+							</Link>
 						</li>
 					)
 				})}

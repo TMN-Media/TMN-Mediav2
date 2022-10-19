@@ -6,7 +6,6 @@ import kenan from "../../assets/headshots/kenan.jpg"
 import hasib2 from "../../assets/headshots/hasib2.jpg"
 import amar from "../../assets/headshots/amar.jpg"
 import ibro from "../../assets/headshots/ibro.jpg"
-
 const Team = () => {
 	return (
 		<div>
