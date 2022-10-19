@@ -32,10 +32,18 @@ const Footer = () => {
 				<div className='order-2 lg:order-4 mb-10'>
 					<h1 className='text-2xl font-bold mb-5 '>Connect</h1>
 					<div className='flex text-4xl text-secondary-100'>
-						<CiFacebook className='mr-3' />
-						<CiTwitter className='mr-3' />
-						<CiInstagram className='mr-3' />
-						<CiLinkedin className='mr-3' />
+						<a href='https://www.facebook.com/profile.php?id=100086717028798'>
+							<CiFacebook className='mr-3' />
+						</a>
+						<a href='https://twitter.com/thetmn_media'>
+							<CiTwitter className='mr-3' />
+						</a>
+						<a href='https://www.instagram.com/tmn__media/'>
+							<CiInstagram className='mr-3' />
+						</a>
+						<a href=''>
+							<CiLinkedin className='mr-3' />
+						</a>
 					</div>
 				</div>
 				<div className='order-4 lg:order-3 mb-10'>
