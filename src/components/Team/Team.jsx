@@ -6,6 +6,8 @@ import kenan from "../../assets/headshots/kenan.jpg"
 import hasib2 from "../../assets/headshots/hasib2.jpg"
 import amar from "../../assets/headshots/amar.jpg"
 import ibro from "../../assets/headshots/ibro.jpg"
+import izo from "../../assets/headshots/izo.jpg"
+
 const Team = () => {
 	return (
 		<div>
@@ -28,11 +30,7 @@ const Team = () => {
 				<div className='text-center grid   grid-cols-1 max-w-3xl m-auto md:grid-cols-2 justify-center items-center'>
 					{teamMembers.map((member, index) => {
 						return (
-							<div
-								key={index}
-								className={`p-5 m-auto ${
-									member.name === "Amar Avdić" ? "md:col-span-2" : "col-span-1 "
-								}`}>
+							<div key={index} className={`p-5 m-auto `}>
 								<img
 									className='bg-secondary-100 m-auto w-40 h-40  rounded-full border-primary-100 border-8 object-cover'
 									src={member.img}
@@ -59,4 +57,5 @@ const teamMembers = [
 	{ name: "Ibro Kardašević", title: "Junior Software Engineer", img: ibro },
 
 	{ name: "Amar Avdić", title: "Client Specialist", img: amar },
+	{ name: "Izo Omanović", title: "Client Specialist", img: izo },
 ]
