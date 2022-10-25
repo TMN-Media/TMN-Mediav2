@@ -20,7 +20,7 @@ const OfferedServices = () => {
 								key={index}
 								className='flex m-auto w-[300px] md:w-[300px] mb-5 '>
 								<GiCheckMark className='text-2xl text-primary-100 mt-2 mr-2' />
-								<h4 className='text-2xl font-semibold  '>{service.name}</h4>
+								<h4 className='text-2xl font-bold  '>{service.name}</h4>
 							</li>
 						)
 					})}
