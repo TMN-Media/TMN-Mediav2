@@ -52,7 +52,7 @@ const Contact = () => {
 								Schedule a call with Elvis today!
 							</p>
 							<p className='text-2xl font-bold lg:text-4xl text-secondary-100 mb-10'>
-								Free 15-Minute Call
+								Free 30-Minute Call
 							</p>
 							<img
 								className='bg-secondary-100 m-auto w-40 h-40 rounded-full border-primary-100 border-8 object-cover'
