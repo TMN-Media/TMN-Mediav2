@@ -48,7 +48,7 @@ const About = () => {
 						</h1>
 						<div className=' w-[100px] h-[3px] mx-auto bg-primary-100'></div>
 						<p className='text-xl px-7 max-w-md  mx-auto my-10'>
-							At TMN Media is a dynamic innovative agency. In an overcrowded
+							TMN Media is a dynamic innovative agency. In an overcrowded
 							marketplace, we assist brands, businesses, and content creators in
 							standing out, building confidence, and increasing results.
 						</p>
@@ -77,7 +77,7 @@ const About = () => {
 								<CiRoute className='text-6xl m-auto text-secondary-100' />
 								<h1 className='mb-5  text-2xl font-bold'> The right path </h1>
 								<p className='m-auto   text-lg md:text-xl'>
-									need re-branding? A new website? Or advertisement? We do it
+									Need re-branding? A new website? Or advertisement? We do it
 									all and we do things with a devotional focus superior to
 									anyone else.
 								</p>

@@ -32,21 +32,21 @@ const Contact = () => {
 	return (
 		<>
 			<Element name='Contact' className='element'>
-				<div
-					data-aos='fade-up'
-					data-aos-delay='50'
-					data-aos-duration='1000'
-					data-aos-easing='ease-in-out'
-					data-aos-mirror='true'
-					data-aos-once='false'
-					data-aos-anchor-placement='top-center'
-					className='text-white p-10  bg-gradient-to-b from-primary-100 to-primary-300'>
+				<div className='text-white p-10  bg-gradient-to-b from-primary-100 to-primary-300'>
 					<h1 className='text-secondary-100 text-center text-3xl  font-bold '>
 						CONTACT US
 					</h1>
 					<div className='w-[100px] h-[3px] mx-auto my-20 bg-secondary-100'></div>
 
-					<div className=' grid lg:grid-cols-4 lg:gap-10  lg:max-w-6xl m-auto'>
+					<div
+						data-aos='fade-up'
+						data-aos-delay='50'
+						data-aos-duration='1000'
+						data-aos-easing='ease-in-out'
+						data-aos-mirror='true'
+						data-aos-once='false'
+						data-aos-anchor-placement='top-center'
+						className=' grid lg:grid-cols-4 lg:gap-10  lg:max-w-6xl m-auto'>
 						<div className='text-center my-auto lg:col-span-2 lg:order-2'>
 							<p className='text-xl font-bold lg:text-2xl '>
 								Schedule a call with Elvis today!

@@ -8,7 +8,7 @@ const Footer = () => {
 		<div className=' p-10 bg-gradient-to-b from-primary-100 to-primary-300 text-white '>
 			<section className='grid grid-col-reverse md:grid-cols-2 lg:grid-cols-3 max-w-7xl m-auto'>
 				<div className='order-5 lg:order-1 mb-10 '>
-					<img src={logo} alt='' />
+					<img className='lg:w-[350px]' src={logo} alt='' />
 					<h1 className='text-xl mb-5'>Better Brand Building</h1>
 					<p>TMN Media LLC | copyright 2022</p>
 				</div>
