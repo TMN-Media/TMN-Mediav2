@@ -15,13 +15,18 @@ module.exports = {
 				},
 				secondary: { 100: "#ffc94a", 200: "#cca03b" },
 			},
+			// Remove unused properties
+			/*
 			transitionProperty: {
 				height: "height",
 			},
 			backgroundImage: {
 				"card-bg": "url('https://wallpaperaccess.com/full/1264671.jpg')",
 			},
+      */
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/aspect-ratio'), // Add plugin used in About.jsx
+	],
 }

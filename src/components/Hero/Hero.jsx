@@ -1,46 +1,47 @@
 /** @format */
 
-import React from "react"
-import heroLogo from "../../assets/logo-vertical.png"
-import heroVideo from "../../assets/nyc-bg.mp4"
-import { Link } from "react-scroll"
+import React from 'react';
+import heroLogo from '../../assets/logo-vertical.png';
+import heroVideo from '../../assets/nyc-bg.mp4';
+import { Link as ScrollLink, Element } from 'react-scroll';
 
 const Hero = () => {
-	return (
-		<div>
-			<section
-				className='bg-black  absolute backdrop-blur-sm top-0 z-90 w-full h-screen bg-opacity-60
-			 text-white text-center'>
-				<div className='flex flex-col justify-center h-1/2 items-center relative'>
-					<img
-						src={heroLogo}
-						alt=''
-						className='w-[150px] lg:w-[250px] m-auto mb-5'
-					/>
-					<h1 className='mb-5 text-xl lg:text-2xl'>Better Brand Building</h1>
+  return (
+    <Element name="hero" className="element">
+      <section className="relative w-full h-screen flex items-center justify-center text-white text-center overflow-hidden">
+        <video
+          src={heroVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          type="video/mp4"
+        />
+        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 z-10"></div>
 
-					<button className='uppercase bg-primary-100 lg:text-xl lg:w-[250px] z-50  cursor-pointer  drop-shadow-xl p-2 text-sm w-[200px] font-bold rounded-full'>
-						<Link
-							to='Contact'
-							spy={true}
-							smooth={true}
-							offset={50}
-							duration={500}>
-							Free audit call
-						</Link>
-					</button>
-				</div>
-			</section>
-			<video
-				src={heroVideo}
-				autoPlay
-				muted
-				loop
-				className=' h-screen w-screen object-cover top-0  '
-				type='video/mp4'
-			/>
-		</div>
-	)
-}
+        <div className="relative z-20 flex flex-col items-center px-4">
+          <img
+            src={heroLogo}
+            alt="TMN Media Logo Vertical"
+            className="w-[150px] lg:w-[250px] mb-6"
+          />
+          <h1 className="mb-8 text-xl lg:text-2xl font-light">Better Brand Building</h1>
 
-export default Hero
+          <ScrollLink
+            to="Contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="uppercase bg-primary-100 hover:bg-primary-200 text-white lg:text-xl lg:w-[250px] cursor-pointer drop-shadow-xl px-8 py-3 text-sm w-[220px] font-bold rounded-full transition-colors duration-200"
+          >
+            Free Audit Call
+          </ScrollLink>
+        </div>
+      </section>
+    </Element>
+  );
+};
+
+export default Hero;
