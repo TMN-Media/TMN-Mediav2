@@ -1,5 +1,7 @@
 /** @format */
 import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import NavBar from './components/NavBar/NavBar';
@@ -10,6 +12,7 @@ import Hero from './components/Hero/Hero';
 import Team from './components/Team/Team';
 import Contact from './components/Contact/Contact';
 import OfferedServices from './components/OfferedServices/OfferedServices';
+import ConsultingSection from './components/ConsultingSection/ConsultingSection';
 import Footer from './components/Footer/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
@@ -37,6 +40,9 @@ const ScrollHandler = () => {
 };
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   return (
     <Router>
       <ScrollHandler />
@@ -51,6 +57,7 @@ function App() {
                   <Hero />
                   <About />
                   <OfferedServices />
+                  <ConsultingSection />
                   <Team />
                   <Contact />
                 </>

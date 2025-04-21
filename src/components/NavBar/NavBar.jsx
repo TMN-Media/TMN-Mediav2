@@ -8,7 +8,9 @@ import logoDark from '../../assets/logo-horizontal-b-text.png'; // Original logo
 
 const menuItems = [
   { name: 'About', to: 'About' },
-  { name: 'Services', to: 'Services' },
+  { name: 'Services', to: 'OfferedServices' },
+  { name: 'Consulting', to: 'Consulting' },
+  { name: 'Team', to: 'Team' },
   { name: 'Contact', to: 'Contact' },
 ];
 
@@ -46,8 +48,10 @@ const NavBar = () => {
     scroll.scrollToTop();
   };
 
-  const navBgClass = hasScrolled ? 'bg-white shadow-md' : 'bg-transparent';
-  const textColorClass = hasScrolled ? 'text-primary-300' : 'text-white';
+  const navBgClass = hasScrolled
+    ? 'bg-primary-200 bg-opacity-50 backdrop-blur-xl shadow-md'
+    : 'bg-transparent backdrop-blur-xl ';
+  const textColorClass = hasScrolled ? 'text-secondary-100' : 'text-white';
   // const logoToShow = hasScrolled ? logoDark : logo; // Remove logo switching logic
   const linkHoverClass = hasScrolled ? 'hover:text-primary-100' : 'hover:text-secondary-100';
 
@@ -106,10 +110,7 @@ const NavBar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`lg:hidden absolute top-full left-0 w-full bg-primary-200 bg-opacity-95 backdrop-blur-sm transition-max-height duration-500 ease-in-out overflow-hidden ${
-          isOpen ? 'max-h-screen shadow-xl' : 'max-h-0'
-        }
-          }`}
+        className={`lg:hidden absolute top-full left-0 w-full bg-primary-200  shadow-xl transition-max-height duration-500 ease-in-out overflow-hidden ${isOpen ? 'max-h-screen' : 'max-h-0'}`}
       >
         <ul className="flex flex-col items-center justify-center p-8 space-y-6">
           {menuItems.map(item => (

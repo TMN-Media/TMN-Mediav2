@@ -25,16 +25,8 @@ const services = [
 ];
 
 const OfferedServices = () => {
-  useEffect(() => {
-    // Initialize AOS
-    AOS.init({
-      duration: 1000,
-      once: true, // Animate cards once
-    });
-  }, []); // Add empty dependency array to run only once
-
   return (
-    <Element name="Services" className="element">
+    <Element name="OfferedServices" className="element">
       <div className="py-16 px-4 bg-gray-100">
         {' '}
         {/* Light background for contrast */}
