@@ -17,6 +17,12 @@ import Footer from './components/Footer/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
 
+// Service Pages
+import EnterpriseMarketing from './pages/Services/EnterpriseMarketing';
+import SoftwareDev from './pages/Services/SoftwareDev';
+import AiMl from './pages/Services/AiMl';
+import Branding from './pages/Services/Branding';
+
 // Component to handle scrolling based on hash
 const ScrollHandler = () => {
   const location = useLocation();
@@ -63,8 +69,15 @@ function App() {
                 </>
               }
             />
+            {/* Legal Pages */}
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+
+            {/* Service Pages */}
+            <Route path="/services/enterprise-marketing" element={<EnterpriseMarketing />} />
+            <Route path="/services/software-development" element={<SoftwareDev />} />
+            <Route path="/services/ai-ml" element={<AiMl />} />
+            <Route path="/services/branding" element={<Branding />} />
           </Routes>
         </main>
         <Footer />

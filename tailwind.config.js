@@ -4,22 +4,22 @@
  */
 
 module.exports = {
-	content: ["./src/**/*.{js,jsx,ts,tsx}"],
-	theme: {
-		fontFamily: {
-			sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-		},
-		extend: {
-			colors: {
-				primary: {
-					100: "#7f21ff",
-					200: "#5217a3",
-					300: "#310d62",
-				},
-				secondary: { 100: "#ffc94a", 200: "#cca03b" },
-			},
-			// Remove unused properties
-			/*
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    fontFamily: {
+      sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+    },
+    extend: {
+      colors: {
+        primary: {
+          100: '#7f21ff',
+          200: '#5217a3',
+          300: '#310d62',
+        },
+        secondary: { 100: '#ffc94a', 200: '#cca03b' },
+      },
+      // Remove unused properties
+      /*
 			transitionProperty: {
 				height: "height",
 			},
@@ -27,9 +27,9 @@ module.exports = {
 				"card-bg": "url('https://wallpaperaccess.com/full/1264671.jpg')",
 			},
       */
-		},
-	},
-	plugins: [
-		require('@tailwindcss/aspect-ratio'), // Add plugin used in About.jsx
-	],
-}
+    },
+  },
+  plugins: [
+    require('@tailwindcss/aspect-ratio'), // Add plugin used in About.jsx
+  ],
+};

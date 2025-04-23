@@ -28,17 +28,20 @@ A modern React application for TMN Media's digital presence.
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/tmn-media-v2.git
 cd tmn-media-v2
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm start
 ```
@@ -56,6 +59,7 @@ The application will be available at [http://localhost:3000](http://localhost:30
 ## Code Quality
 
 This project uses:
+
 - ESLint for code linting
 - Prettier for code formatting
 - Husky for git hooks
