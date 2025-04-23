@@ -87,9 +87,9 @@ const About = () => {
 
           <div className="max-w-4xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">
             <p className="text-xl text-gray-700 leading-relaxed mb-6">
-              TMN Media is a premier enterprise-focused marketing and technology agency. In today's
-              competitive business landscape, we empower organizations to establish distinctive
-              market positions, build brand confidence, and achieve measurable growth.
+              TMN Media is a premier enterprise-focused marketing and technology agency. In
+              today&apos;s competitive business landscape, we empower organizations to establish
+              distinctive market positions, build brand confidence, and achieve measurable growth.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
               Our integrated approach combines strategic marketing expertise with technological

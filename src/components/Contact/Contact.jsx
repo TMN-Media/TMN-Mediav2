@@ -55,9 +55,9 @@ const Contact = () => {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              Ready to transform your organization's digital presence? Book a complimentary
+              Ready to transform your organization&apos;s digital presence? Book a complimentary
               30-minute strategic consultation to discuss your objectives and discover how TMN
-              Media's enterprise solutions can drive measurable results.
+              Media&apos;s enterprise solutions can drive measurable results.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ const Contact = () => {
                 </div>
 
                 <h4 className="text-xl font-semibold text-secondary-100 mb-4">
-                  What You'll Receive:
+                  What You&apos;ll Receive:
                 </h4>
                 <ul className="space-y-3 mb-8">
                   {benefits.map((benefit, index) => (

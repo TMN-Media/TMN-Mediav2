@@ -14,16 +14,16 @@ import {
 
 const consultingServices = [
   {
-    title: 'Enterprise Marketing Strategy',
+    title: 'Marketing Strategy',
     description:
       'Develop data-driven marketing plans to reach your target audience and grow your brand presence through multi-channel campaigns and performance analytics.',
     icon: FaChartLine,
     link: '#',
   },
   {
-    title: 'Enterprise Tech & IT Solutions',
+    title: 'Tech & IT Solutions',
     description:
-      'Implement robust and scalable IT infrastructure, cloud solutions, and custom software development tailored to enterprise requirements.',
+      'Implement robust and scalable IT infrastructure, cloud solutions, and custom software development tailored to your business requirements.',
     icon: FaCode,
     link: '#',
   },
@@ -42,14 +42,14 @@ const consultingServices = [
     link: '#',
   },
   {
-    title: 'Corporate Design & Branding',
+    title: 'Design & Branding',
     description:
       'Create compelling visual identities, user experiences, and marketing materials that resonate with your audience and establish a cohesive brand presence.',
     icon: FaPaintBrush,
     link: '#',
   },
   {
-    title: 'IoT Enterprise Solutions',
+    title: 'IoT Solutions',
     description:
       'Connect your devices and systems with Internet of Things solutions for enhanced efficiency, data collection, and smart infrastructure management.',
     icon: FaNetworkWired,
@@ -73,13 +73,13 @@ const ConsultingSection = () => {
               Strategic Advisory
             </p>
             <h2 className="text-5xl font-bold text-white mb-6 leading-tight">
-              Enterprise Consulting <span className="text-secondary-100">Services</span>
+              Business Consulting <span className="text-secondary-100">Services</span>
             </h2>
             <div className="w-24 h-1 mx-auto mb-8 bg-gradient-to-r from-secondary-100 to-primary-100"></div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Unlock your organization's potential with our expert consulting services. We provide
-              strategic guidance and hands-on support across key business and technology domains to
-              drive innovation and growth.
+              Unlock your organization&apos;s potential with our expert consulting services. We
+              provide strategic guidance and hands-on support across key business and technology
+              domains to drive innovation and growth.
             </p>
           </div>
 

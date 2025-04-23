@@ -14,8 +14,7 @@ const features = [
   {
     icon: FaUsers,
     title: 'Audience Targeting',
-    description:
-      'Precision targeting to reach your ideal enterprise customers across multiple platforms',
+    description: 'Precision targeting to reach your ideal customers across multiple platforms',
   },
   {
     icon: FaChartLine,
