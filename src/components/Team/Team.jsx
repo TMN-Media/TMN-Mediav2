@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { Element } from 'react-scroll';
-import kenan from '../../assets/headshots/kenan.jpg';
+import kenan from '../../assets/headshots/kenoheadshot.png';
 import hasib2 from '../../assets/headshots/hasib2.jpg';
 import 'aos/dist/aos.css';
 import { FaLinkedin, FaTwitter } from 'react-icons/fa';
@@ -30,23 +30,12 @@ const teamMembers = [
 
 const Team = () => {
   useEffect(() => {
-    // Initialize AOS if needed
-    if (typeof window !== 'undefined' && window.AOS) {
-      window.AOS.refresh();
-    }
+    // AOS is now globally initialized with minimal settings in App.js
   }, []);
 
   return (
     <Element name="Team">
-      <div
-        id="Team"
-        className="py-24 bg-gradient-to-b from-gray-50 to-white"
-        data-aos="fade-up"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-        data-aos-once="true"
-      >
+      <div id="Team" className="py-24 bg-gradient-to-b from-gray-50 to-white" data-aos="fade-up">
         <div className="container mx-auto px-4">
           <h2 className="text-center text-primary-100 text-4xl font-bold mb-4">
             MEET THE FOUNDERS
@@ -70,7 +59,6 @@ const Team = () => {
                 key={index}
                 className="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl group"
                 data-aos="fade-up"
-                data-aos-delay={index * 150}
               >
                 <div className="flex flex-col md:flex-row">
                   <div className="md:w-2/5 overflow-hidden">

@@ -21,39 +21,39 @@ const services = [
     name: 'Social Media Marketing',
     icon: FaBullhorn,
     description:
-      'Build your brand presence across platforms with strategic content, community management, and targeted advertising campaigns.',
+      'Build your brand presence across platforms with strategic content, community management, and targeted advertising that fits your budget.',
     cta: 'View Strategy',
     link: '#',
   },
   {
-    name: 'Advanced SEO & Search Marketing',
+    name: 'Local SEO & Search Marketing',
     icon: FaSearchDollar,
     description:
-      'Improve your digital visibility with comprehensive search engine optimization strategies and performance-based search marketing.',
+      'Improve your visibility in local searches with targeted optimization strategies that help nearby customers find your business.',
     cta: 'Explore SEO',
     link: '#',
   },
   {
-    name: 'Strategic Media Planning & Buying',
+    name: 'Affordable Media Planning',
     icon: FaRegNewspaper,
     description:
-      'Maximize your media impact with data-driven planning, negotiation, and placement across traditional and digital channels.',
+      'Maximize your advertising impact with smart media planning that delivers results without the big agency price tag.',
     cta: 'Learn More',
     link: '#',
   },
   {
-    name: 'Business Intelligence & Analytics',
+    name: 'Performance Analytics',
     icon: FaChartLine,
     description:
-      'Transform raw data into actionable insights with comprehensive analytics, dashboards, and performance reporting.',
+      "Understand what's working with easy-to-understand reports and actionable insights that help grow your small business.",
     cta: 'See Analytics',
     link: '#',
   },
   {
-    name: 'Software Development',
+    name: 'Website Development',
     icon: FaCode,
     description:
-      'Create powerful digital experiences with custom web applications, mobile solutions, and scalable software systems.',
+      'Create a professional online presence with responsive, fast-loading websites and e-commerce solutions built for small businesses.',
     cta: 'View Projects',
     link: '#',
   },
@@ -61,7 +61,7 @@ const services = [
     name: 'Identity & Branding',
     icon: FaPaintBrush,
     description:
-      'Establish a powerful brand presence with comprehensive identity systems, guidelines, and design elements.',
+      'Stand out from competitors with professional logos, visual identity systems, and consistent branding that customers remember.',
     cta: 'View Portfolio',
     link: '#',
   },
@@ -69,10 +69,7 @@ const services = [
 
 const OfferedServices = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    // AOS is now globally initialized with minimal settings in App.js
   }, []);
 
   return (
@@ -87,28 +84,22 @@ const OfferedServices = () => {
               className="text-primary-100 text-lg font-semibold uppercase tracking-wider mb-3"
               data-aos="fade-up"
             >
-              Comprehensive Solutions
+              Affordable Solutions
             </p>
-            <h2
-              className="text-5xl font-bold text-gray-900 mb-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
+            <h2 className="text-5xl font-bold text-gray-900 mb-6" data-aos="fade-up">
               Our Professional <span className="text-primary-100">Services</span>
             </h2>
             <div
               className="w-24 h-1 mx-auto mb-8 bg-gradient-to-r from-primary-100 to-secondary-100"
               data-aos="fade-up"
-              data-aos-delay="150"
             ></div>
             <p
               className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
               data-aos="fade-up"
-              data-aos-delay="200"
             >
-              We provide a comprehensive suite of high-quality services designed to elevate your
-              brand and drive measurable results. Explore how our solutions can transform your
-              business.
+              We provide tailored services designed for small and medium-sized businesses that want
+              to grow their brand and compete effectively. Our solutions deliver real results
+              without breaking your budget.
             </p>
           </div>
 
@@ -121,7 +112,6 @@ const OfferedServices = () => {
                   key={index}
                   className="bg-white p-8 rounded-xl shadow-xl text-left transition-all duration-300 ease-in-out border border-gray-100 hover:border-primary-100/20 group hover:-translate-y-1 hover:shadow-2xl"
                   data-aos="fade-up"
-                  data-aos-delay={index * 100}
                 >
                   <div className="flex items-center mb-6">
                     <div className="p-3 rounded-md bg-primary-100/10 text-primary-100 mr-4 group-hover:bg-primary-100 group-hover:text-white transition-all duration-300">
@@ -135,13 +125,13 @@ const OfferedServices = () => {
                   <a
                     href={
                       index === 0
-                        ? '/services/enterprise-marketing'
+                        ? '/services/social-media-marketing'
                         : index === 1
-                          ? '/services/software-development'
+                          ? '/services/local-seo'
                           : index === 2
-                            ? '/services/ai-ml'
+                            ? '/services/media-planning'
                             : index === 3
-                              ? '/services/branding'
+                              ? '/services/analytics'
                               : service.link
                     }
                     className="inline-flex items-center text-primary-100 font-medium hover:text-primary-200 transition-colors duration-300"
@@ -157,8 +147,8 @@ const OfferedServices = () => {
           {/* CTA Section */}
           <div className="mt-20 text-center" data-aos="fade-up">
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              Need a custom solution for your business? Our team of experts is ready to develop a
-              tailored approach for your specific needs.
+              Need a custom solution for your small business? Our team is ready to develop an
+              affordable approach that fits your specific needs and budget.
             </p>
             <a
               href="#Contact"

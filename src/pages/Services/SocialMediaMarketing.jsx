@@ -40,7 +40,7 @@ const features = [
   },
 ];
 
-const EnterpriseMarketing = () => {
+const SocialMediaMarketing = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow">
@@ -164,4 +164,4 @@ const EnterpriseMarketing = () => {
   );
 };
 
-export default EnterpriseMarketing;
+export default SocialMediaMarketing;

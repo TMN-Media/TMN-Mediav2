@@ -4,18 +4,23 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
+import { HelmetProvider } from 'react-helmet-async';
 import NavBar from './components/NavBar/NavBar';
 
 import './index.css';
-import About from './components/About/About';
-import Hero from './components/Hero/Hero';
-import Team from './components/Team/Team';
-import Contact from './components/Contact/Contact';
-import OfferedServices from './components/OfferedServices/OfferedServices';
-import ConsultingSection from './components/ConsultingSection/ConsultingSection';
+// Remove direct component imports for sections, they are now in HomePage
+// import About from './components/About/About';
+// import Hero from './components/Hero/Hero';
+// import Team from './components/Team/Team';
+// import Contact from './components/Contact/Contact';
+// import OfferedServices from './components/OfferedServices/OfferedServices';
+// import ConsultingSection from './components/ConsultingSection/ConsultingSection';
 import Footer from './components/Footer/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
+
+// Import HomePage
+import HomePage from './pages/Home/HomePage';
 
 // Service Pages
 import EnterpriseMarketing from './pages/Services/EnterpriseMarketing';
@@ -47,42 +52,42 @@ const ScrollHandler = () => {
 
 function App() {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    // Initialize AOS with minimal configuration - mostly disabling animations
+    AOS.init({
+      duration: 400, // Very short duration for subtle fade-in only
+      once: true, // Animation only happens once
+      mirror: false, // No animations when scrolling back up
+      easing: 'ease-out', // Simple easing
+      delay: 0, // No delay
+      offset: 50, // Smaller offset for more immediate visibility
+      disable: 'mobile', // Disable on mobile for better performance
+      anchorPlacement: 'top-bottom', // When element enters viewport
+    });
   }, []);
   return (
-    <Router>
-      <ScrollHandler />
-      <div className="flex flex-col min-h-screen">
-        <NavBar />
-        <main className="flex-grow">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Hero />
-                  <About />
-                  <OfferedServices />
-                  <ConsultingSection />
-                  <Team />
-                  <Contact />
-                </>
-              }
-            />
-            {/* Legal Pages */}
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+    <HelmetProvider>
+      <Router>
+        <ScrollHandler />
+        <div className="flex flex-col min-h-screen">
+          <NavBar />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              {/* Legal Pages */}
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
 
-            {/* Service Pages */}
-            <Route path="/services/enterprise-marketing" element={<EnterpriseMarketing />} />
-            <Route path="/services/software-development" element={<SoftwareDev />} />
-            <Route path="/services/ai-ml" element={<AiMl />} />
-            <Route path="/services/branding" element={<Branding />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+              {/* Service Pages */}
+              <Route path="/services/enterprise-marketing" element={<EnterpriseMarketing />} />
+              <Route path="/services/software-development" element={<SoftwareDev />} />
+              <Route path="/services/ai-ml" element={<AiMl />} />
+              <Route path="/services/branding" element={<Branding />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 

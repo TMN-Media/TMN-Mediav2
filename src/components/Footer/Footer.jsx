@@ -82,11 +82,7 @@ const Footer = () => {
             {/* Column 1: About */}
             <div>
               <div className="mb-6">
-                <img
-                  className="h-12 w-auto mb-6 brightness-0 invert"
-                  src={logo}
-                  alt="TMN Media Logo"
-                />
+                <img className="h-12 w-auto mb-6" src={logo} alt="TMN Media Logo" />
                 <p className="text-gray-400 leading-relaxed mb-6">
                   TMN Media delivers high-quality marketing and technology solutions that transform
                   organizations and drive measurable business outcomes.
@@ -208,13 +204,13 @@ const Footer = () => {
                 <li>
                   <a href="mailto:info@tmn-media.com" className="flex items-start">
                     <FaEnvelope className="text-secondary-100 mt-1 mr-3 flex-shrink-0" />
-                    <span className="text-gray-300">info@tmn-media.com</span>
+                    <span className="text-gray-300">contact@tmn-media.com</span>
                   </a>
                 </li>
                 <li>
                   <a href="tel:+1234567890" className="flex items-start">
                     <FaPhoneAlt className="text-secondary-100 mt-1 mr-3 flex-shrink-0" />
-                    <span className="text-gray-300">+1 (234) 567-890</span>
+                    <span className="text-gray-300">(408) 290-2660</span>
                   </a>
                 </li>
                 <li className="flex items-start">
@@ -222,7 +218,7 @@ const Footer = () => {
                   <span className="text-gray-300">
                     TMN Media Headquarters
                     <br />
-                    New York, NY
+                    San Francisco Bay Area, CA
                   </span>
                 </li>
               </ul>

@@ -16,42 +16,42 @@ const consultingServices = [
   {
     title: 'Marketing Strategy',
     description:
-      'Develop data-driven marketing plans to reach your target audience and grow your brand presence through multi-channel campaigns and performance analytics.',
+      'Develop affordable, data-driven marketing plans to reach your target audience and grow your brand presence through focused multi-channel campaigns.',
     icon: FaChartLine,
     link: '#',
   },
   {
-    title: 'Tech & IT Solutions',
+    title: 'Website & App Development',
     description:
-      'Implement robust and scalable IT infrastructure, cloud solutions, and custom software development tailored to your business requirements.',
+      'Create modern, responsive websites and user-friendly applications that help small businesses establish a professional online presence.',
     icon: FaCode,
     link: '#',
   },
   {
-    title: 'Advanced AI & Machine Learning',
+    title: 'Social Media Management',
     description:
-      'Leverage artificial intelligence and machine learning to automate processes, gain actionable insights, and create intelligent products that transform operations.',
+      'Build your online community with consistent, engaging content and targeted campaigns that connect your business with potential customers.',
     icon: FaBrain,
     link: '#',
   },
   {
-    title: 'Blockchain Technology Integration',
+    title: 'Local SEO & Online Visibility',
     description:
-      'Navigate the complexities of blockchain technology, tokenization, and decentralized applications for secure and transparent business processes.',
+      'Improve your local search rankings to help nearby customers find your business when they need your products or services.',
     icon: FaCubes,
     link: '#',
   },
   {
     title: 'Design & Branding',
     description:
-      'Create compelling visual identities, user experiences, and marketing materials that resonate with your audience and establish a cohesive brand presence.',
+      'Create compelling visual identities, user experiences, and marketing materials that help your small business stand out from competitors.',
     icon: FaPaintBrush,
     link: '#',
   },
   {
-    title: 'IoT Solutions',
+    title: 'Digital Advertising',
     description:
-      'Connect your devices and systems with Internet of Things solutions for enhanced efficiency, data collection, and smart infrastructure management.',
+      'Maximize your advertising budget with targeted campaigns that reach the right audience at the right time to drive measurable results.',
     icon: FaNetworkWired,
     link: '#',
   },
@@ -77,9 +77,9 @@ const ConsultingSection = () => {
             </h2>
             <div className="w-24 h-1 mx-auto mb-8 bg-gradient-to-r from-secondary-100 to-primary-100"></div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Unlock your organization&apos;s potential with our expert consulting services. We
-              provide strategic guidance and hands-on support across key business and technology
-              domains to drive innovation and growth.
+              Unlock your small business&apos;s potential with our expert consulting services. We
+              provide affordable strategic guidance and hands-on support to help you compete with
+              larger companies and achieve sustainable growth.
             </p>
           </div>
 
@@ -89,9 +89,8 @@ const ConsultingSection = () => {
               return (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/10 transition-all duration-300 ease-in-out transform hover:scale-102 hover:bg-white/15 group"
+                  className="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/10 transition-all duration-300 ease-in-out hover:bg-white/15 group"
                   data-aos="fade-up"
-                  data-aos-delay={index * 100}
                 >
                   <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-lg bg-gradient-to-br from-primary-100 to-primary-200 shadow-lg">
                     <IconComponent className="text-3xl text-white" />

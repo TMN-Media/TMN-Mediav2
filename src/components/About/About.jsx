@@ -19,7 +19,7 @@ import {
 const features = [
   {
     title: 'Strategic Direction',
-    text: "Our tailored approach ensures your enterprise gets exactly what it needs - whether that's rebranding, digital transformation, or targeted advertising campaigns.",
+    text: "Our tailored approach ensures your business gets exactly what it needs - whether that's rebranding, digital transformation, or targeted advertising campaigns.",
     icon: FaRoute,
   },
   {
@@ -39,22 +39,19 @@ const features = [
   },
   {
     title: 'Expert Team',
-    text: 'Our cross-functional team of industry specialists brings diverse expertise to every project, ensuring comprehensive and innovative solutions.',
+    text: 'Our talented team brings diverse expertise to every project, ensuring comprehensive and innovative solutions for businesses of all sizes.',
     icon: FaUsers,
   },
   {
     title: 'Innovation Focus',
-    text: 'We stay ahead of market trends and technological advancements to provide cutting-edge solutions that give your enterprise a competitive advantage.',
+    text: 'We stay ahead of market trends and technological advancements to provide cutting-edge solutions that give your business a competitive advantage.',
     icon: FaLightbulb,
   },
 ];
 
 const About = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    // AOS is now globally initialized with minimal settings in App.js
   }, []);
 
   return (
@@ -72,29 +69,25 @@ const About = () => {
           >
             Our Mission
           </p>
-          <h2
-            className="text-5xl font-bold text-gray-900 mb-6"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
+          <h2 className="text-5xl font-bold text-gray-900 mb-6" data-aos="fade-up">
             About <span className="text-primary-100">TMN Media</span>
           </h2>
           <div
             className="w-24 h-1 mx-auto mb-8 bg-gradient-to-r from-primary-100 to-secondary-100"
             data-aos="fade-up"
-            data-aos-delay="150"
           ></div>
 
-          <div className="max-w-4xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="200">
+          <div className="max-w-4xl mx-auto mb-16" data-aos="fade-up">
             <p className="text-xl text-gray-700 leading-relaxed mb-6">
-              TMN Media is a premier enterprise-focused marketing and technology agency. In
-              today&apos;s competitive business landscape, we empower organizations to establish
-              distinctive market positions, build brand confidence, and achieve measurable growth.
+              TMN Media is a dedicated marketing and technology agency for small and medium-sized
+              businesses. In today&apos;s competitive business landscape, we empower local
+              organizations to establish distinctive market positions, build brand confidence, and
+              achieve measurable growth.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
               Our integrated approach combines strategic marketing expertise with technological
-              innovation, delivering comprehensive solutions that address complex business
-              challenges and create sustainable competitive advantages for our clients.
+              innovation, delivering affordable solutions that address real business challenges and
+              create sustainable competitive advantages for our clients.
             </p>
           </div>
 
@@ -103,7 +96,6 @@ const About = () => {
             <div
               className="px-6 py-10 rounded-xl bg-gradient-to-br from-primary-100/10 to-primary-100/5"
               data-aos="fade-up"
-              data-aos-delay="300"
             >
               <h3 className="text-5xl font-bold text-primary-100 mb-2">94%</h3>
               <p className="text-gray-700 font-medium">Client Retention Rate</p>
@@ -111,15 +103,13 @@ const About = () => {
             <div
               className="px-6 py-10 rounded-xl bg-gradient-to-br from-secondary-100/10 to-secondary-100/5"
               data-aos="fade-up"
-              data-aos-delay="400"
             >
-              <h3 className="text-5xl font-bold text-secondary-100 mb-2">200+</h3>
-              <p className="text-gray-700 font-medium">Enterprise Clients</p>
+              <h3 className="text-5xl font-bold text-secondary-100 mb-2">100+</h3>
+              <p className="text-gray-700 font-medium">Local Businesses Served</p>
             </div>
             <div
               className="px-6 py-10 rounded-xl bg-gradient-to-br from-primary-300/10 to-primary-300/5"
               data-aos="fade-up"
-              data-aos-delay="500"
             >
               <h3 className="text-5xl font-bold text-primary-300 mb-2">35%</h3>
               <p className="text-gray-700 font-medium">Average ROI Increase</p>
@@ -128,7 +118,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Video Section - Enterprise-level presentation */}
+      {/* Video Section */}
       <div className="bg-gray-900 py-20 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-300/20 to-primary-100/20 mix-blend-overlay"></div>
         <div className="container mx-auto max-w-5xl relative z-10" data-aos="fade-up">
@@ -163,17 +153,12 @@ const About = () => {
             >
               Our Advantages
             </p>
-            <h3
-              className="text-4xl font-bold text-white mb-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              Why Enterprise Leaders Choose <span className="text-secondary-100">TMN Media</span>
+            <h3 className="text-4xl font-bold text-white mb-6" data-aos="fade-up">
+              Why Small Business Owners Choose <span className="text-secondary-100">TMN Media</span>
             </h3>
             <div
               className="w-24 h-1 mx-auto mb-8 bg-gradient-to-r from-white/50 to-secondary-100"
               data-aos="fade-up"
-              data-aos-delay="150"
             ></div>
           </div>
 
@@ -183,9 +168,8 @@ const About = () => {
               return (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-md p-8 rounded-xl text-center transition-all duration-300 transform hover:scale-102 hover:bg-white/15 border border-white/20 flex flex-col items-center shadow-lg"
+                  className="bg-white/10 backdrop-blur-md p-8 rounded-xl text-center transition-all duration-300 hover:bg-white/15 border border-white/20 flex flex-col items-center shadow-lg"
                   data-aos="fade-up"
-                  data-aos-delay={index * 100}
                 >
                   <div className="p-4 rounded-full bg-secondary-100/20 mb-6">
                     <IconComponent className="text-4xl text-secondary-100" />
