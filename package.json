@@ -1,9 +1,9 @@
 {
   "name": "tmn-media-v2",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -25,26 +25,14 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{js,jsx}",
-    "format": "prettier --write \"src/**/*.{js,jsx,css,md}\"",
-    "prepare": "husky install"
+    "format": "prettier --write \"src/**/*.{js,jsx,css,md}\""
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",

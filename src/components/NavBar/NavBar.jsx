@@ -1,16 +1,15 @@
 /** @format */
-
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaPhoneAlt } from 'react-icons/fa';
+import { FaBars, FaTimes, FaArrowRight } from 'react-icons/fa';
 import logoDark from '../../assets/logo-horizontal-b-text.png';
 
 const menuItems = [
   { name: 'About', to: 'About' },
   { name: 'Services', to: 'OfferedServices' },
-  { name: 'Consulting', to: 'Consulting' },
-  { name: 'Team', to: 'Team' },
+  { name: 'Work', to: 'Work' },
+  { name: 'How we work', to: 'Consulting' },
   { name: 'Contact', to: 'Contact' },
 ];
 
@@ -20,199 +19,82 @@ const NavBar = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setHasScrolled(true);
-    } else {
-      setHasScrolled(false);
-    }
-  };
-
   useEffect(() => {
+    const handleScroll = () => setHasScrolled(window.scrollY > 30);
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const closeMenu = () => setIsOpen(false);
   const scrollToTop = () => {
     closeMenu();
     scroll.scrollToTop();
   };
 
-  // Enhanced styling for enterprise look
-  const navBgClass = hasScrolled
-    ? 'bg-black/90 backdrop-blur-lg shadow-lg border-b border-gray-200/20'
-    : 'bg-black/30 backdrop-blur-md';
+  const navClass = hasScrolled
+    ? 'bg-slate-950/95 backdrop-blur-xl border-b border-white/10 shadow-xl'
+    : 'bg-slate-950/70 backdrop-blur-md';
 
-  const textColorClass = hasScrolled ? 'text-white' : 'text-white';
-  const linkHoverClass = hasScrolled ? 'hover:text-primary-100' : 'hover:text-secondary-100';
-  const activeLinkClass = hasScrolled
-    ? 'font-bold text-primary-100'
-    : 'font-bold text-secondary-100';
-  const ctaButtonClass = hasScrolled
-    ? 'bg-primary-100 hover:bg-primary-200 text-white'
-    : 'bg-secondary-100 hover:bg-secondary-200 text-gray-900';
+  const navLink = (item, mobile = false) => {
+    const classes = mobile
+      ? 'block py-3 text-lg font-medium text-white hover:text-secondary-100 cursor-pointer'
+      : 'font-medium text-slate-200 hover:text-secondary-100 cursor-pointer transition-colors';
+
+    return isHomePage ? (
+      <ScrollLink
+        to={item.to}
+        spy
+        smooth
+        offset={-88}
+        duration={450}
+        className={classes}
+        activeClass="text-secondary-100"
+        onClick={mobile ? closeMenu : undefined}
+      >
+        {item.name}
+      </ScrollLink>
+    ) : (
+      <RouterLink to={`/#${item.to}`} className={classes} onClick={mobile ? closeMenu : undefined}>
+        {item.name}
+      </RouterLink>
+    );
+  };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${navBgClass}`}
-    >
-      <div className="container mx-auto px-4 md:px-8 h-24 flex justify-between items-center">
-        {/* Logo */}
-        <div className="flex-shrink-0">
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${navClass}`}>
+      <div className="container mx-auto px-5 md:px-8 h-24 flex justify-between items-center max-w-7xl">
+        {isHomePage ? (
+          <ScrollLink to="hero" smooth duration={450} onClick={scrollToTop} className="cursor-pointer">
+            <img src={logoDark} alt="TMN Media" className="h-10 lg:h-11 w-auto" />
+          </ScrollLink>
+        ) : (
+          <RouterLink to="/">
+            <img src={logoDark} alt="TMN Media" className="h-10 lg:h-11 w-auto" />
+          </RouterLink>
+        )}
+
+        <div className="hidden lg:flex items-center gap-8">
+          {menuItems.map(item => <div key={item.name}>{navLink(item)}</div>)}
           {isHomePage ? (
-            <ScrollLink
-              to="hero"
-              smooth={true}
-              duration={500}
-              onClick={scrollToTop}
-              className="cursor-pointer flex items-center"
-            >
-              <img
-                src={logoDark}
-                alt="TMN Media Logo"
-                className={`h-10 lg:h-12 w-auto transition-all duration-300`}
-              />
+            <ScrollLink to="Contact" smooth offset={-88} duration={450} className="inline-flex items-center bg-secondary-100 hover:bg-secondary-200 text-slate-950 py-3 px-5 rounded-lg font-bold cursor-pointer">
+              Start a project <FaArrowRight className="ml-2" />
             </ScrollLink>
           ) : (
-            <RouterLink to="/" className="cursor-pointer flex items-center">
-              <img
-                src={logoDark}
-                alt="TMN Media Logo"
-                className={`h-10 lg:h-12 w-auto transition-all duration-300`}
-              />
+            <RouterLink to="/#Contact" className="inline-flex items-center bg-secondary-100 text-slate-950 py-3 px-5 rounded-lg font-bold">
+              Start a project <FaArrowRight className="ml-2" />
             </RouterLink>
           )}
         </div>
 
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center">
-          <ul className={`flex items-center space-x-8 ${textColorClass} mr-8`}>
-            {menuItems.map((item, index) => (
-              <li key={item.name}>
-                {isHomePage ? (
-                  <ScrollLink
-                    to={item.to}
-                    spy={true}
-                    smooth={true}
-                    offset={-96} // Adjusted for taller navbar
-                    duration={500}
-                    className={`font-medium cursor-pointer transition-all duration-200 hover:opacity-80 ${linkHoverClass} py-2`}
-                    activeClass={activeLinkClass}
-                  >
-                    {item.name}
-                  </ScrollLink>
-                ) : (
-                  <RouterLink
-                    to={`/#${item.to}`}
-                    className={`font-medium cursor-pointer transition-all duration-200 hover:opacity-80 ${linkHoverClass} py-2`}
-                  >
-                    {item.name}
-                  </RouterLink>
-                )}
-              </li>
-            ))}
-          </ul>
-
-          {/* CTA Button */}
-          {isHomePage ? (
-            <ScrollLink
-              to="Contact"
-              spy={true}
-              smooth={true}
-              offset={-96}
-              duration={500}
-              className={`flex items-center ${ctaButtonClass} py-2.5 px-5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-md`}
-            >
-              <FaPhoneAlt className="mr-2" />
-              <span>Schedule Call</span>
-            </ScrollLink>
-          ) : (
-            <RouterLink
-              to="/#Contact"
-              className={`flex items-center ${ctaButtonClass} py-2.5 px-5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-md`}
-            >
-              <FaPhoneAlt className="mr-2" />
-              <span>Schedule Call</span>
-            </RouterLink>
-          )}
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="lg:hidden flex items-center">
-          {isHomePage ? (
-            <ScrollLink
-              to="Contact"
-              spy={true}
-              smooth={true}
-              offset={-96}
-              duration={500}
-              className={`mr-4 ${ctaButtonClass} py-2 px-4 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-md`}
-            >
-              <FaPhoneAlt className="inline mr-1 text-xs" />
-              <span>Call</span>
-            </ScrollLink>
-          ) : (
-            <RouterLink
-              to="/#Contact"
-              className={`mr-4 ${ctaButtonClass} py-2 px-4 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-md`}
-            >
-              <FaPhoneAlt className="inline mr-1 text-xs" />
-              <span>Call</span>
-            </RouterLink>
-          )}
-
-          <button
-            onClick={toggleMenu}
-            className={`p-2 focus:outline-none rounded-md ${hasScrolled ? 'bg-gray-800' : 'bg-white/10'} ${textColorClass}`}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
-          </button>
-        </div>
+        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-3 text-white" aria-label="Toggle menu">
+          {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+        </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      <div
-        className={`lg:hidden absolute top-full left-0 w-full ${hasScrolled ? 'bg-black/95' : 'bg-gray-900/95'} backdrop-blur-lg shadow-xl transition-all duration-300 ease-in-out overflow-hidden border-t border-gray-200/20 ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
-      >
-        <ul className="flex flex-col items-center justify-center py-6 space-y-4">
-          {menuItems.map(item => (
-            <li key={item.name} className="w-full text-center">
-              {isHomePage ? (
-                <ScrollLink
-                  to={item.to}
-                  spy={true}
-                  smooth={true}
-                  offset={-96}
-                  duration={500}
-                  className={`block py-3 text-lg font-medium ${hasScrolled ? 'text-white hover:text-primary-100' : 'text-white hover:text-secondary-100'} cursor-pointer transition-colors duration-200`}
-                  activeClass={activeLinkClass}
-                  onClick={closeMenu}
-                >
-                  {item.name}
-                </ScrollLink>
-              ) : (
-                <RouterLink
-                  to={`/#${item.to}`}
-                  className={`block py-3 text-lg font-medium ${hasScrolled ? 'text-white hover:text-primary-100' : 'text-white hover:text-secondary-100'} cursor-pointer transition-colors duration-200`}
-                  onClick={closeMenu}
-                >
-                  {item.name}
-                </RouterLink>
-              )}
-            </li>
-          ))}
-        </ul>
+      <div className={`lg:hidden bg-slate-950 border-t border-white/10 overflow-hidden transition-all ${isOpen ? 'max-h-[500px] py-5' : 'max-h-0'}`}>
+        <div className="px-6 space-y-2">
+          {menuItems.map(item => <div key={item.name}>{navLink(item, true)}</div>)}
+        </div>
       </div>
     </nav>
   );
